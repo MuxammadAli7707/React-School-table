@@ -1,0 +1,82 @@
+.umumiy {
+  padding: 20px 40px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.753);
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    list-style-type: none;
+    gap: 35px;
+  }
+
+  &__item {
+    width: 350px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 4px;
+    padding: 15px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__box {
+    width: 70%;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.521);
+    margin-bottom: 15px;
+  }
+
+  &__count {
+    font-size: 24px;
+    color: #000;
+  }
+
+  &__nafar {
+    font-size: 16px;
+    color: red;
+  }
+
+  &__icondw,
+  &__iconup
+   {
+    position: relative;
+    top: 2px;
+    font-weight: 400;
+    margin-right: 5px;
+  }
+
+  &__nafarup,
+  &__iconup {
+    color: green;
+  }
+
+  &__static {
+    width: 30%;
+  }
+
+  &__bicon,
+  &__oicon,
+  &__gicon
+  {
+    font-size: 40px;
+    color: #b794fb;
+  }
+
+  &__oicon {
+    color: #50dbff;
+  }
+
+  &__gicon {
+    color: #21f3a3;
+  }
+}
