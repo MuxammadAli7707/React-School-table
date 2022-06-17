@@ -12,8 +12,8 @@ export default function Header(){
       <div className="d-flex justify-content-between align-items-center">
         <button className="header__btnbell">
           <i className='bx bxs-bell' ></i>
-          <span class="position-absolute top-0 start-51 translate-middle p-2 bg-warning border border-light rounded-circle">
-        <span class="visually-hidden">New alerts</span>
+          <span className="position-absolute top-0 start-51 translate-middle p-2 bg-warning border border-light rounded-circle">
+        <span className="visually-hidden">New alerts</span>
       </span>
         </button>
         <div className="header__box d-flex justify-content-between align-items-center">

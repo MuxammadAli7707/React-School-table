@@ -39,7 +39,7 @@ export default function StudentsItem() {
                 <td className="students__td">UZS 100,000</td>
 
                 <td className="students__td">
-                  <button className="students__error"><i class='bx bxs-error-circle'></i></button>
+                  <button className="students__error"><i className='bx bxs-error-circle'></i></button>
                   <button className="students__edit"><i className="bx bxs-pencil" /></button>
                   <button className="students__xbtn"><i className="bx bx-x" /></button>
                 </td>
