@@ -1,7 +1,14 @@
 import React from "react";
-import { studentObj } from "../Data/students";
+import { useContext } from "react";
+import { StudentContext } from "../Store/StudentStore";
 
 export default function StudentsItem() {
+  const {data, dispatch} = useContext(StudentContext);
+  const deleteOne = (id) => {
+    if(window.confirm('Are you sure')) {
+      dispatch({type: 'DEL', payload: {id: id}})
+    }
+  }
   return(
     <table className="students__tabel">
       <thead className="students__thead">
@@ -19,7 +26,7 @@ export default function StudentsItem() {
       </thead>
       <tbody className="students__body" id="tbody">
         {
-          studentObj.map((item, key) => {
+          data.map((item, key) => {
             return(
               <tr key={key+782} className="students__tr">
                 <td className="students__td">{item.id}</td>
@@ -35,13 +42,13 @@ export default function StudentsItem() {
                 <td className="students__td">{item.number}</td>
                 <td className="students__td">{item.group.length} ta</td>
                 <td className="students__td">Yanvar 26, 2020</td>
-                <td className="students__td">Muzlatilgan</td>
+                <td className="students__td">Aktiv</td>
                 <td className="students__td">UZS 100,000</td>
 
                 <td className="students__td">
                   <button className="students__error"><i className='bx bxs-error-circle'></i></button>
                   <button className="students__edit"><i className="bx bxs-pencil" /></button>
-                  <button className="students__xbtn"><i className="bx bx-x" /></button>
+                  <button  onClick={() => deleteOne(item.id)} className="students__xbtn"><i className="bx bx-x" /></button>
                 </td>
               </tr>
             )

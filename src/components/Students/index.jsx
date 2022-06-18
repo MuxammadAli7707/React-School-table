@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "../Navbar";
 import Header from "../Navbar/Header";
+import { StudentContext } from "../Store/StudentStore";
 import StudentsItem from "./Students";
 
+
 export default function Students() {
+  const {data} = useContext(StudentContext);
   return(
     <div className="d-flex">
       <Navbar />
@@ -21,7 +24,7 @@ export default function Students() {
           </form>
         </div>
 
-        <p className="students__count">1-7 / 33 tadan</p>
+        <p className="students__count">1-10 / {data.length} tadan</p>
 
         <StudentsItem />
       </section>

@@ -1,9 +1,14 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import Header from "../Navbar/Header";
+import { StudentContext } from "../Store/StudentStore";
+import { TeacherContext } from "../Store/TeacherStore";
 
 export default function Umumiy() {
+  const { data } = useContext(StudentContext);
+  const { teacherData } = useContext(TeacherContext);
   return(
     <div className="d-flex">
       <Navbar />
@@ -17,8 +22,8 @@ export default function Umumiy() {
             <li className="umumiy__item d-flex col-4">
               <div className="umumiy__box">
               <h3 className="umumiy__subtitle">O'quvchilar</h3>
-                <p className="umumiy__count">239 nafar</p>
-                <p className="umumiy__nafar"><i class='umumiy__icondw bx bxs-downvote'></i> 5 nafar</p>
+                <p className="umumiy__count">{data.length} nafar</p>
+                <p className="umumiy__nafar"><i class='umumiy__icondw bx bxs-downvote'></i> 10 nafar</p>
               </div>
               <div className="umumiy__static d-flex flex-column justify-content-end">
                 <div className="d-flex justify-content-end">
@@ -34,7 +39,7 @@ export default function Umumiy() {
             <li className="umumiy__item d-flex col-4">
               <div className="umumiy__box">
               <h3 className="umumiy__subtitle">O'qituvchilar</h3>
-                <p className="umumiy__count">7 nafar</p>
+                <p className="umumiy__count">{teacherData.length} nafar</p>
                 <p className="umumiy__nafarup"><i class='umumiy__iconup bx bxs-upvote'></i> 2 nafar</p>
               </div>
               <div className="umumiy__static d-flex flex-column justify-content-end">
@@ -51,7 +56,7 @@ export default function Umumiy() {
             <li className="umumiy__item d-flex col-4">
               <div className="umumiy__box">
               <h3 className="umumiy__subtitle">Guruhlar</h3>
-                <p className="umumiy__count">33 nafar</p>
+                <p className="umumiy__count">20 nafar</p>
                 <p className="umumiy__nafar"><i class='umumiy__icondw bx bxs-downvote'></i> 1 nafar</p>
               </div>
               <div className="umumiy__static d-flex flex-column justify-content-end">
