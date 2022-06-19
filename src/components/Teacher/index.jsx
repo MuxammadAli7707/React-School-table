@@ -1,17 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import Header from "../Navbar/Header";
-import { StudentContext } from "../Store/StudentStore";
-import StudentsItem from "./Students";
+import TeacherItem from "./TeacherItem";
 
-
-export default function Students() {
-  const {data, dispatch} = useContext(StudentContext);
-
-  // const searchHandler = (e) => {
-  //   dispatch({type: 'SEARCH', payload: {name: e.target.value}})
-  // }
+export default function Teacher() {
   return(
     <div className="d-flex">
       <Navbar />
@@ -21,8 +14,8 @@ export default function Students() {
         <div className="d-flex justify-content-between align-items-center mb-4">
           <div className="d-flex align-items-center">
             <h2 className="students__title">O'quvchilar</h2>
-            <Link to='/addstudents'>
-              <button className="students__addbtn" type="button">O'quvchi qo'shish </button>
+            <Link to="/addteacher">
+              <button className="students__addbtn" type="button">O'qituvchi qo'shish </button>
             </Link>
           </div>
           <form className="students__form" action="">
@@ -31,9 +24,9 @@ export default function Students() {
           </form>
         </div>
 
-        <p className="students__count">1-10 / {data.length} tadan</p>
+        <p className="students__count">1-7 / 33 tadan</p>
 
-        <StudentsItem />
+        <TeacherItem />
       </section>
       </main>
     </div>

@@ -106,6 +106,8 @@ const studentObj = [
     group : [1],
     number : "(95) 151-25-12",
     groupNum : 1,
+    status : "Aktiv",
+    payment : "100,000",
   },
   {
     id : 2,
@@ -113,6 +115,8 @@ const studentObj = [
     group : [13, 14, 16],
     number : "(90) 201-90-25",
     groupNum : 3,
+    status : "Aktiv",
+    payment : "500,000",
   },
   {
     id : 3,
@@ -120,6 +124,8 @@ const studentObj = [
     group : [17, 1],
     number : "(99) 119-51-51",
     groupNum : 1,
+    status : "Muzlatilgan",
+    payment : "300,000",
   },
   {
     id : 4,
@@ -127,6 +133,8 @@ const studentObj = [
     group : [13],
     number : "(94) 251-21-21",
     groupNum : 1,
+    status : "Muzlatilgan",
+    payment : "10,000",
 
   },
   {
@@ -135,6 +143,8 @@ const studentObj = [
     group : [14],
     number : "(95) 011-36-33",
     groupNum : 1,
+    status : "Aktiv",
+    payment : "50,000",
 
   },
   {
@@ -143,6 +153,8 @@ const studentObj = [
     group : [16, 17],
     number : "(91) 171-99-11",
     groupNum : 1,
+    status : "Aktiv",
+    payment : "120,000",
 
   },
   {
@@ -151,6 +163,8 @@ const studentObj = [
     group : [1],
     number : "(93) 951-51-49",
     groupNum : 1,
+    status : "Muzlatilgan",
+    payment : "5,000",
 
   },
   {
@@ -159,6 +173,8 @@ const studentObj = [
     group : [13],
     number : "(73) 501-13-63",
     groupNum : 1,
+    status : "Muzlatilgan",
+    payment : "3,000",
 
   },
   {
@@ -167,6 +183,8 @@ const studentObj = [
     group : [14],
     number : "(71) 616-17-91",
     groupNum : 1,
+    status : "Aktiv",
+    payment : "70,000",
   },
   {
     id : 10,
@@ -174,6 +192,8 @@ const studentObj = [
     group : [16],
     number : "(33) 719-39-51",
     groupNum : 1,
+    status : "Muzlatilgan",
+    payment : "30,000",
   }
 ];
 

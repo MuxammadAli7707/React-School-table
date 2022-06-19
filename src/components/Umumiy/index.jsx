@@ -23,7 +23,7 @@ export default function Umumiy() {
               <div className="umumiy__box">
               <h3 className="umumiy__subtitle">O'quvchilar</h3>
                 <p className="umumiy__count">{data.length} nafar</p>
-                <p className="umumiy__nafar"><i class='umumiy__icondw bx bxs-downvote'></i> 10 nafar</p>
+                <p className="umumiy__nafar"><i class='umumiy__icondw bx bxs-downvote'></i>{data.length} nafar</p>
               </div>
               <div className="umumiy__static d-flex flex-column justify-content-end">
                 <div className="d-flex justify-content-end">
@@ -40,7 +40,7 @@ export default function Umumiy() {
               <div className="umumiy__box">
               <h3 className="umumiy__subtitle">O'qituvchilar</h3>
                 <p className="umumiy__count">{teacherData.length} nafar</p>
-                <p className="umumiy__nafarup"><i class='umumiy__iconup bx bxs-upvote'></i> 2 nafar</p>
+                <p className="umumiy__nafarup"><i class='umumiy__iconup bx bxs-upvote'></i>{teacherData.length} nafar</p>
               </div>
               <div className="umumiy__static d-flex flex-column justify-content-end">
                 <div className="d-flex justify-content-end">

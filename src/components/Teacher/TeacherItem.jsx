@@ -1,14 +1,18 @@
 import React from "react";
 import { useContext } from "react";
-import { StudentContext } from "../Store/StudentStore";
+import { TeacherContext } from "../Store/TeacherStore";
 
-export default function StudentsItem() {
-  const {data, dispatch} = useContext(StudentContext);
+
+export default function TeacherItem() {
+
+  const {teacherData, dispatch} = useContext(TeacherContext)
+
   const deleteOne = (id) => {
     if(window.confirm('Are you sure')) {
       dispatch({type: 'DEL', payload: {id: id}})
     }
   }
+
   return(
     <table className="students__tabel">
       <thead className="students__thead">
@@ -26,21 +30,21 @@ export default function StudentsItem() {
       </thead>
       <tbody className="students__body" id="tbody">
         {
-          data.map((item, key) => {
+          teacherData.map((item, key) => {
             return(
               <tr key={key+782} className="students__tr">
                 <td className="students__td">{item.id}</td>
                 <td className="students__td">
                   <div className="d-flex align-items-center">
                     <div className="students__avabox">
-                      <img className="students__ava" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY7NvxS8KHkHlLCkE-fGBMRgiXrSjgrNHWj5gxrOAVQ41-ZwwQ3Gu3n8z0hNiqAyfUbA8&usqp=CAU" alt="user" />
+                      <img className="students__ava" src={item.img} alt="user" />
                     </div>
                     <h3 className="students__names">{item.name}</h3>
                   </div>
                   </td>
                 <td className="students__td">Guruh #{item.groupNum}</td>
                 <td className="students__td">{item.number}</td>
-                <td className="students__td">{item.group.length} ta</td>
+                <td className="students__td">{item.group} ta</td>
                 <td className="students__td">Yanvar 26, 2020</td>
                 <td className="students__td">{item.status}</td>
                 <td className="students__td">UZS {item.payment}</td>
@@ -48,7 +52,7 @@ export default function StudentsItem() {
                 <td className="students__td">
                   <button className="students__error"><i className='bx bxs-error-circle'></i></button>
                   <button className="students__edit"><i className="bx bxs-pencil" /></button>
-                  <button  onClick={() => deleteOne(item.id)} className="students__xbtn"><i className="bx bx-x" /></button>
+                  <button onClick={() => deleteOne(item.id)} className="students__xbtn"><i className="bx bx-x" /></button>
                 </td>
               </tr>
             )

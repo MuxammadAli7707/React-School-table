@@ -4,10 +4,11 @@ import Gruhlar from "./components/Main/Group";
 import Hisob from "./components/Main/Hisob";
 import Hisobotlar from "./components/Main/Hisobotlar";
 import Login from "./components/Main/Login";
-import Main from "./components/Main/Main";
 import Settings from "./components/Main/Settings";
-import Teacher from "./components/Main/Teacher";
 import Students from "./components/Students";
+import AddStudents from "./components/Students/AddStudents";
+import Teacher from "./components/Teacher";
+import AddTeacher from "./components/Teacher/AddTeacher";
 import Umumiy from "./components/Umumiy";
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
       <Route path="/settings" element={<Settings />} />
       <Route path="/login" element={<Login />} />
       <Route path="/hisobotlar" element={<Hisobotlar />} />
-
+      <Route path="/addteacher" element={<AddTeacher />} />
+      <Route path="/addstudents" element={<AddStudents />} />
       </Routes>
     </>
   );
