@@ -21,7 +21,7 @@ export const TeacherProvider = ({ children }) => {
           groupNum : 1,
           status : action.payload.activ,
           payment : "100,000",
-          img : "https://freepikpsd.com/file/2019/10/enseignant-png-3-Transparent-Images.png"
+          img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY7NvxS8KHkHlLCkE-fGBMRgiXrSjgrNHWj5gxrOAVQ41-ZwwQ3Gu3n8z0hNiqAyfUbA8&usqp=CAU"
         }, ...state,]
 
       case "EDIT":
